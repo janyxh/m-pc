@@ -1,0 +1,37 @@
+@import "../color";
+
+.details-list-page {
+  .el-checkbox-group {
+    padding: 15px 20px;
+  }
+
+  .el-table {
+    min-height: 356px;
+
+    .table-header-sss {
+      background: $mop-bg-light;
+    }
+
+    a {
+      color: $mop-primary;
+      cursor: pointer;
+    }
+  }
+
+  .footer {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: $mop-text-gray;
+    cursor: pointer;
+    // background: red;
+  }
+
+  .el-dialog__body {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+}

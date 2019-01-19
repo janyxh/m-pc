@@ -1,11 +1,13 @@
 {
-    "plugins": [
-      [
-        "component",
-        {
-          "libraryName": "element-ui",
-          "styleLibraryName": "theme-chalk"
-        }
-      ]
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    "transform-vue-jsx",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
     ]
-  }
+  ]
+}

@@ -1,0 +1,31 @@
+@import 'color';
+
+.el-table .cell {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.el-button {
+  border-radius: 0;
+  min-width: 80px;
+}
+
+.el-tooltip__popper.is-light {
+  background: #fff;
+  color: $mop-text-gray-deep;
+  border: 1px solid rgba(220, 221, 221, 1);
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.clear {
+  clear: both;
+}
+
+.el-dropdown-menu__item {
+  min-width: 50px;
+  text-align: center;
+}
+
+.el-input__inner {
+  border-radius: 0;
+}

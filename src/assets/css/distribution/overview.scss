@@ -1,0 +1,257 @@
+@import "../../../assets/css/color";
+
+.overview-wrap {
+
+  /*  ----------------------------------------------------  概览  ------------------------------------------------ */
+  .overview {
+    display: flex;
+
+    .item {
+      flex: 1;
+      padding: 30px 20px;
+      margin-right: 30px;
+      background: #ffffff;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+      color: $mop-text-gray;
+      position: relative;
+
+      >span>i {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 14px;
+        color: $mop-text-gray;
+      }
+
+      .el-col {
+        b {
+          display: block;
+          color: $mop-text;
+          font-size: 24px;
+        }
+
+        p {
+          width: 56px;
+          height: 56px;
+          border: 1px solid $mop-bg-dark;
+          border-radius: 50%;
+          text-align: center;
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+          }
+
+          /*   客户人数(人)  */
+          i.icon-data_btn_cust {
+            color: $mop-primary;
+          }
+
+          /*   分销员总数(人)  */
+          i.icon-data_btn_dist {
+            color: $mop-success;
+          }
+
+          /*   订单总数(笔)  */
+          i.icon-data_btn_order {
+            color: $mop-deep-primary;
+          }
+
+          /*   订单总额(元)  */
+          i.icon-data_btn_total {
+            color: $mop-waring;
+          }
+
+          /*   成交金额(元)  */
+          i.icon-data_btn_deal {
+            color: $mop-danger;
+          }
+
+          /*   累计佣金(元)  */
+          i.icon-data_btn_comm {
+            color: $mop-primary;
+          }
+
+        }
+      }
+
+      .el-col:first-child {
+        min-width: 90px;
+      }
+    }
+
+    .item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  /*  ----------------------------------------------------  概要对比  ------------------------------------------------ */
+  .contrast {
+    display: flex;
+    margin-top: 30px;
+
+    .item {
+      flex: 1;
+      margin-right: 30px;
+      background: #ffffff;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+
+      .data {
+        padding: 30px 30px 0 20px;
+
+        .data-item {
+          display: flex;
+          margin-bottom: 30px;
+
+          .name {
+            flex: 0 0 70px;
+            font-size: 12px;
+            text-align: right;
+            line-height: 32px;
+            color: $mop-text-gray;
+            padding-right: 10px;
+          }
+
+          .progress-bar {
+            flex: 1 1 auto;
+            height: 32px;
+            background: $mop-bg-light;
+
+            .progress {
+              height: 32px;
+              color: #ffffff;
+              background: $mop-primary;
+              box-sizing: border-box;
+              position: relative;
+
+              .precent {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+
+              .precent.less {
+                right: -30px;
+                color: $mop-text;
+              }
+            }
+          }
+        }
+
+        .data-item:nth-of-type(2) .progress {
+          background: $mop-success;
+        }
+
+        .data-item:nth-of-type(3) .progress {
+          background: $mop-deep-primary;
+        }
+
+        // .el-row {
+        //   margin-bottom: 30px;
+        //   font-size: 12px;
+        //   text-align: right;
+        //   line-height: 32px;
+        //   color: $mop-text-gray;
+
+        //   .progress-bar {
+        //     height: 32px;
+        //     background: $mop-bg-light;
+
+        //     .progress {
+        //       height: 32px;
+        //       color: #ffffff;
+        //       background: $mop-primary;
+        //       padding: 0 10px;
+        //       box-sizing: border-box;
+        //     }
+        //   }
+        // }
+
+        // .el-row:nth-of-type(2) .progress {
+        //   background: $mop-success;
+        // }
+
+        // .el-row:nth-of-type(3) .progress {
+        //   background: $mop-deep-primary;
+        // }
+      }
+    }
+
+    .item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  /*  ----------------------------------------------------  趋势图表  ------------------------------------------------ */
+  .trend {
+    display: flex;
+    margin-top: 30px;
+
+    .item {
+      flex: 1;
+      margin-right: 30px;
+      background: #ffffff;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+
+      .date-wrap {
+        margin: 20px 30px 0 30px;
+        padding-top: 8px;
+        height: 30px;
+        font-size: 12px;
+        color: $mop-text;
+        position: relative;
+
+        .el-date-editor {
+          width: 150px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+
+      .chart-wrap {
+        height: 300px;
+        position: relative;
+
+        .charts {
+          height: 300px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .item:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  h3.title {
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid $mop-bg;
+    color: $mop-text-gray-deep;
+    font-size: 14px;
+    position: relative;
+
+    i {
+      font-size: 14px;
+      color: $mop-text-gray;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

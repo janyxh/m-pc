@@ -1,0 +1,386 @@
+@import 'color';
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*overflow-y: scroll;*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+/* 按钮 */
+
+/* 占比百分百的按钮 */
+.btn-large {
+  width: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Microsoft YaHei';
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 1280px;
+  overflow: auto;
+}
+
+.el-header {
+  position: absolute;
+  top: 0;
+  // left: 200px;
+  width: calc(100% - 180px);
+  background: #ffffff;
+}
+
+main {
+  width: calc(100% - 180px);
+  position: absolute;
+  left: 180px;
+  top: 60px;
+}
+
+/* 页面中间样式 */
+.el-main {
+  // width: 100%;
+  min-width: 1000px;
+  padding: 0px;
+  min-height: calc(100% - 60px);
+  background: $mop-bg;
+  overflow: hidden;
+  /* display: flex; */
+}
+
+// 页面中间内容 不包括筛选
+.content {
+  background: $mop-bg;
+  padding: 30px;
+  /* flex: 1; */
+  /* overflow: auto; */
+}
+
+// 弹框标题下划线
+.el-dialog__header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+// .el-dialog__footer {
+//   border-top: 1px solid #e7e7e7;
+// }
+
+/* ----------------------------------------------------------------------  筛选面板样式 ----------------------------------------------------------------------  */
+.list-screening {
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  min-height: 60px;
+  background: #fff;
+  position: relative;
+  font-size: 14px;
+
+  .list-tatol {
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    color: #595757;
+    cursor: pointer;
+
+    i {
+      margin-left: 5px;
+    }
+
+    i.active {
+      transform: rotate(-180deg);
+      transition: 500ms;
+      color: $mop-primary;
+    }
+  }
+
+  .add-an {
+    float: right;
+    margin: 14px 0 0 20px;
+    border-radius: 0;
+  }
+
+  .screen-input {
+    width: 370px;
+    float: right;
+    margin: 14px 0 0 20px;
+
+    >input {
+      border-radius: 0;
+    }
+  }
+
+  .screen-input2 {
+    width: 150px;
+
+    >input {
+      border-radius: 0;
+    }
+  }
+
+  .el-input-group__append {
+    //   width: 32px;
+    // padding: 0;
+
+    button {
+      // width: 30px;
+      min-width: 30px;
+    }
+  }
+
+  .el-input-group__prepend,
+  .el-input-group__append {
+    border-radius: 0;
+  }
+
+  // 筛选面板
+  .screen-bar {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+
+    .screen-bar-nr {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+      .screen-list {
+        width: 25%;
+        // padding: 0 30px 15px;
+        box-sizing: border-box;
+        height: 95px;
+        float: left;
+
+        .el-select {
+          width: 100%;
+        }
+
+        .el-range-separator {
+          padding: 0;
+        }
+
+        p {
+          color: $mop-text-gray;
+          font-size: 12px;
+          height: 32px;
+          line-height: 32px;
+          padding-top: 6px;
+          margin-bottom: 10px;
+        }
+
+        .el-input__inner {
+          width: 100%;
+          padding-left: 0;
+          border-radius: 0;
+          border: none !important;
+          border-bottom: 1px solid #eee !important;
+        }
+
+        .hd-num-bar {
+          width: 100%;
+          height: 32px;
+          border-bottom: 1px solid #eee;
+
+          >input {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            outline: none;
+            float: left;
+
+            &::-webkit-input-placeholder {
+              color: $mop-text-gray;
+            }
+          }
+
+          >span {
+            float: left;
+            height: 32px;
+            line-height: 32px;
+            color: $mop-text-gray;
+            margin: 0 40px 0 20px;
+          }
+
+          >i {
+            float: right;
+            color: $mop-text-gray;
+            height: 32px;
+            line-height: 32px;
+          }
+        }
+      }
+
+      .mr0 {
+        margin-right: 0 !important;
+      }
+
+      .soso-bar {
+        width: 100%;
+        clear: both;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        .soso-an {
+          width: 80px;
+          border-radius: 0;
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .screen-bar {
+      padding: 0px
+    }
+
+    .screen-list {
+      padding: 0 10px 15px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1460px) {
+    .screen-list {
+      padding: 0 10px 15px;
+    }
+  }
+
+  @media screen and (min-width: 1460px) {
+    .screen-bar {
+      padding: 0 30px
+    }
+
+    .screen-list {
+      padding: 0 30px 15px;
+    }
+  }
+}
+
+/* ----------------------------------------------------------------------  列表表格样式 ----------------------------------------------------------------------  */
+// 表格外框
+.list-wrap {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+// 操作项 下拉菜单
+.xl-bar {
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  line-height: 20px;
+  color: $mop-primary;
+  outline: none;
+
+  >span {
+    width: 66px;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #e7e7e7;
+  }
+}
+
+// 表格底部
+.list-bottom {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+
+  .all-check {
+    float: left;
+    margin: 19px 0 0 30px;
+  }
+
+  .bottom-an {
+    width: 80px;
+    float: left;
+    margin: 14px 0 0 30px;
+  }
+
+  .page-bar {
+    width: 60%;
+    margin-top: 16px;
+    float: right;
+    margin-right: 30px;
+    text-align: right;
+  }
+}

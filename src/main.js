@@ -1,7 +1,21 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
+import router from "./routes";
 import store from "./store";
+//导入公共css
+import "@/assets/css/element-variables.scss";
+import "@/assets/css/common.scss";
+import "@/assets/css/reset.scss";
+import "@/assets/css/color.scss";
+// 引入字体图标
+import "@/assets/iconfont/iconfont.css";
+// 注册自定义指令
+import "@/directives";
+// 工具函数
+import mixins from "@/mixins";
+Vue.mixin({
+  methods: mixins
+});
 
 import {
   Pagination,
@@ -71,7 +85,7 @@ import {
   MessageBox,
   Message,
   Notification
-} from 'element-ui';
+} from "element-ui";
 
 Vue.use(Pagination);
 Vue.use(Dialog);
@@ -148,6 +162,9 @@ Vue.prototype.$message = Message;
 
 Vue.config.productionTip = false;
 
+Vue.config.devtools = true;
+
+// console.log(process.env);
 
 new Vue({
   router,
