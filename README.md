@@ -45,29 +45,6 @@ https://www.rrxiu.net/my#/wsite
 
 http://www.eqxiu.com/h5/list
 
-账号：
-18929391040
-
-密码：
-maozedong1976
-
-数商MOP使用的第三方账号
-
-https://note.youdao.com/share/?id=c83569d1f3851aa02a0bfd2244bd5635&type=note#/
-
-小程序
-zhongqidong123456@163.com
-zhongqi123456
-
-
-```
-
-#### 产品原型
-
-```
-svn://10.12.52.76/数商事业部/营销平台/产品
-
-```
 
 ### 目录结构
 
